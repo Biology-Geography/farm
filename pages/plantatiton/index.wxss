@@ -1,0 +1,9 @@
+.NO-plantation {
+  margin-top: 10px;
+  font-weight: bolder;
+  font-style: italic;
+  color: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

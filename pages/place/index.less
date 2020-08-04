@@ -1,0 +1,128 @@
+page {
+    min-height: 100vh;
+  }
+  
+  .tabs {
+    display: flex;
+    position: relative;
+    padding: 25rpx 0;
+  }
+  
+  .tabs > .tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    color: #999;
+    font-size: 33rpx;
+  }
+  
+  .tabs > .bar {
+    width: 50%;
+    height: 2px;
+    background-color: #0d2f8a;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .color {
+    color: #0d2f8a !important;
+  }
+  
+  swiper {
+    min-height: calc(100vh - 10px);
+  }
+  
+  swiper-item {
+    box-sizing: border-box;
+    overflow: scroll;
+  }
+  
+  .basic-data {
+    padding: 25rpx;
+    position: relative;
+  }
+  
+  .basic-data > view {
+    line-height: 80rpx;
+    font-size: 40rpx;
+  }
+  
+  .basic-data > .imgwrapper {
+    margin-bottom: 100rpx;
+  }
+  
+  .basic-data > .imgwrapper image {
+    width: 100%;
+    border-radius: 10rpx;
+    box-shadow: 0 5rpx 15rpx 0 #999;
+    background-color: #fff;
+    margin-top: 25rpx;
+  }
+  
+  .detailed-data > video {
+    width: 100%;
+    height: 450rpx;
+    position: fixed;
+    top: 0;
+    box-sizing: border-box;
+  }
+  
+  .detailed-data > .sensorData {
+    margin-top: 450rpx;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20rpx 0;
+  }
+  
+  .detailed-data > .sensorData > view {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    font-size: 35rpx;
+    justify-content: center;
+    align-items: center;
+    padding: 20rpx 0;
+  }
+  
+  .detailed-data > .sensorData > view > image {
+    width: 60rpx;
+    height: 60rpx;
+    display: flex;
+    flex-shrink: 0;
+  }
+  
+  .detailed-data > .sensorData > view > text {
+    margin-top: 8rpx;
+  }
+  
+  .detailed-data > .sensorData > view > .title {
+    font-size: 25rpx;
+  }
+  
+  .detailed-data > .sensorData > view > .value {
+    font-size: 35rpx;
+  }
+  
+  .btnwrapper {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    box-shadow: 0 -2rpx 10rpx 0 #0d2f8a;
+  }
+  
+  .btnwrapper > button {
+    background-color: #0d2f8a;
+    color: #fff;
+    border-radius: 0;
+  }
+  
+  .tishi {
+    font-size: 40rpx;
+    font-style: oblique;
+    font-weight: bolder;
+    color: #0d2f8a;
+  }

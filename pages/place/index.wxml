@@ -1,0 +1,35 @@
+<view class="tabs">
+    <view class="tab {{current == 0 ? 'color' : ''}}" data-index="0" bindtap="slide">基本信息</view>
+    <view wx:if="{{isMe}}" class="tab {{current == 1 ? 'color' : ''}}" data-index="1" bindtap="slide">详细数据</view>
+    <view class="bar {{isMe === false ? 'full' : ''}}" animation="{{animation}}"></view>
+  </view>
+  <swiper current="{{current}}" bindchange="change">
+    <swiper-item class="basic-data">
+      <view wx:if="{{isClaimed}}" class="tishi">
+        <view>{{msg}}</view>
+      </view>
+      <view>名称：{{placeName}}</view>
+      <view>种植作物：{{plantproduce}}</view>
+      <view>简介：{{remark}}</view>
+      <view class="imgwrapper">
+        <text>图片：</text>
+          <view wx:if="{{imageUrl == ''}}" class="tip">--暂无图片--</view>
+          <view wx:else>
+              <image src="{{imageUrl}}"></image>
+          </view>
+      </view>
+    </swiper-item>
+    <swiper-item wx:if="{{isClaimed && isMe}}" class="detailed-data">
+      <video src="{{video}}" controls autoplay="true"></video>
+      <view class="sensorData">
+        <view wx:for="{{sensors}}">
+          <image src="{{item.icon}}"></image>
+          <text class="title">{{item.title}}</text>
+          <text class="value">{{item.data}}</text>
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+  <view wx:if="{{!isClaimed}}" class="btnwrapper" bindtap="claim">
+    <button>我要认领</button>
+  </view>

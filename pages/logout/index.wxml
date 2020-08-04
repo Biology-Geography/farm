@@ -1,0 +1,2 @@
+<!--退出界面-->
+<view><button bindtap="logout"> 退出 </button></view>

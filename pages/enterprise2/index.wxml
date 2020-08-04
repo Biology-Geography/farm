@@ -1,0 +1,12 @@
+<view class="ent-info">
+    <view class="item">{{entName}}</view>
+    <view class="info-title">名称:</view>
+    <view class="info-content">{{entName}}</view>
+    <view class="info-title">地址:</view>
+    <view class="info-content">{{province}}-{{city}}-{{county}}</view>
+    <view class="info-title">详细地址:</view>
+    <view class="info-content">{{location}}</view>
+    <view class="info-title">Logo:</view>
+    <view class="info-logo"><image  src="{{Logo}}"></image></view>
+    <view class="info-title">图片：--暂无图片!--</view>
+</view>

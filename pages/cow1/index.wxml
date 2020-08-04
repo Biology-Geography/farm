@@ -1,0 +1,270 @@
+<view class="header">
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+      <view class="picker">
+        <text>{{array[index]}}</text>
+        <image src="/image/icon_item.png"></image>
+      </view>
+    </picker>
+  </view>
+  <view class="forms">
+    <form bindsubmit="formSubmit" data-type="addLiveStockSpecies">
+      <view class="form {{index===0?'':'hide'}} fadeInUp">
+        <view class="add-content">
+          <text>品种：</text>
+          <input name="name"></input>
+        </view>
+        <view class="add-content">
+          <text>简介：</text>
+          <textarea auto-height="true" type="text" maxlength="200" name="itdt"></textarea>
+        </view>
+        <view class="add-content">
+          <text>所在地块：</text>
+          <picker mode="multiSelector" value="{{multiIndex}}" range="{{multiArray}}" bindcolumnchange="columnchange" bindchange="pickchange">
+            <view>{{multiArray[0][multiIndex[0]]}}</view>
+            <view>{{multiArray[1][multiIndex[1]]}}</view>
+          </picker>
+        </view>
+        <view class="image-block">
+            <view wx:if="{{localImgSrc!==''}}" class="image-view">
+                <view class="icon-delete" bindtap="delete">
+                    <image src="/image/delete.png" ></image>
+                </view>
+                <view class="icon-logo">
+                    <image src="{{localImgSrc}}" mode="aspectFit"></image>
+                </view>
+            </view>
+            <view wx:else class="btn-view">
+                <button bindtap="pickimg"> 选择图片</button>
+            </view>
+        </view>
+        <button formType="submit">提交</button>
+      </view>
+    </form>
+    <form bindsubmit="formSubmit" data-type="addAddLiveStock">
+      <view class="form {{index===1?'':'hide'}} fadeInUp">
+        <view class="add-content">
+          <text>牲畜品种：</text>
+          <picker bindchange="bindLiveStockSpeciesChange" value="{{liveStockSpeciesArrIndex}}" range="{{liveStockSpeciesArr}}">
+            <view>{{liveStockSpeciesArr[liveStockSpeciesArrIndex]}}</view>
+          </picker>
+        </view>
+        <view class="add-content">
+          <text>牲畜数量：</text>
+          <input type="number" name="number"></input>
+        </view>
+        <view class="add-content">
+          <text>所在基地：</text>
+          <input name="siteName" value="{{siteName}}" disabled></input>
+        </view>
+        <view class="add-content">
+          <text>所在地块：</text>
+          <input name="placeName" value="{{placeName}}" disabled></input>
+        </view>
+        <!-- <view>
+          <text>所在地块：</text>
+          <picker mode="multiSelector" value="{{multiIndex}}" range="{{multiArray}}" bindcolumnchange="columnchange" bindchange="pickchange">
+            <view>{{multiArray[0][multiIndex[0]]}}</view>
+            <view>{{multiArray[1][multiIndex[1]]}}</view>
+          </picker>
+        </view> -->
+        <view class="add-content">
+          <text>日期：</text>
+          <picker mode="date" value="{{date_1}}" bindchange="bindDateChange_1">
+            <view>{{date_1}}</view>
+          </picker>
+        </view>
+        <view class="image-block">
+            <view wx:if="{{localImgSrc!==''}}" class="image-view">
+                <view class="icon-delete" bindtap="delete">
+                    <image src="/image/delete.png" ></image>
+                </view>
+                <view class="icon-logo">
+                    <image src="{{localImgSrc}}" mode="aspectFit"></image>
+                </view>
+            </view>
+            <view wx:else class="btn-view">
+                <button bindtap="pickimg"> 选择图片</button>
+            </view>
+        </view>
+        <button formType="submit">提交</button>
+      </view>
+    </form>
+    <form bindsubmit="formSubmit" data-type="addFeed">
+      <view class="form {{index===2?'':'hide'}} fadeInUp shorter">
+        <view class="add-content">
+          <text>饲料种类：</text>
+          <input name="type"></input>
+        </view>
+        <view class="add-content">
+          <text>喂养量(斤)：</text>
+          <input name="number"></input>
+        </view>
+        <view class="add-content">
+          <text>喂养日期：</text>
+          <picker mode="date" value="{{date_1}}" bindchange="bindDateChange_1">
+            <view>{{date_1}}</view>
+          </picker>
+        </view>
+        <view class="add-content">
+          <text>喂养对象：</text>
+          <picker bindchange="bindAddLiveStockChange" value="{{addLiveStockSpeciesArrIndex}}" range="{{addLiveStockSpeciesArr}}">
+            <view>{{addLiveStockSpeciesArr[addLiveStockSpeciesArrIndex]}}</view>
+          </picker>
+        </view>
+        <view class="image-block">
+            <view wx:if="{{localImgSrc!==''}}" class="image-view">
+                <view class="icon-delete" bindtap="delete">
+                    <image src="/image/delete.png" ></image>
+                </view>
+                <view class="icon-logo">
+                    <image src="{{localImgSrc}}" mode="aspectFit"></image>
+                </view>
+            </view>
+            <view wx:else class="btn-view">
+                <button bindtap="pickimg"> 选择图片</button>
+            </view>
+        </view>
+        <button formType="submit">提交</button>
+      </view>
+    </form>
+    <form bindsubmit="formSubmit" data-type="addYiMiao">
+      <view class="form {{index===3?'':'hide'}} fadeInUp">
+        <view class="add-content">
+          <text>疫苗名称：</text>
+          <input name="name"></input>
+        </view>
+        <view class="add-content">
+          <text>接种对象：</text>
+          <picker bindchange="bindAddLiveStockChange" value="{{addLiveStockSpeciesArrIndex}}" range="{{addLiveStockSpeciesArr}}">
+            <view>{{addLiveStockSpeciesArr[addLiveStockSpeciesArrIndex]}}</view>
+          </picker>
+        </view>
+        <view class="add-content">
+          <text>接种日期：</text>
+          <picker mode="date" value="{{date_1}}" bindchange="bindDateChange_1">
+            <view>{{date_1}}</view>
+          </picker>
+        </view>
+        <view class="image-block">
+            <view wx:if="{{localImgSrc!==''}}" class="image-view">
+                <view class="icon-delete" bindtap="delete">
+                    <image src="/image/delete.png" ></image>
+                </view>
+                <view class="icon-logo">
+                    <image src="{{localImgSrc}}" mode="aspectFit"></image>
+                </view>
+            </view>
+            <view wx:else class="btn-view">
+                <button bindtap="pickimg"> 选择图片</button>
+            </view>
+        </view>
+        <button formType="submit">提交</button>
+      </view>
+    </form>
+    <form bindsubmit="formSubmit" data-type="addQuarantine">
+      <view class="form {{index===4?'':'hide'}} fadeInUp shorter">
+        <view class="add-content">
+          <text>是否合格：</text>
+          <picker bindchange="bindIsQuarChange" value="{{isQuarIndex}}" range="{{isQuar}}">
+            <view>{{isQuar[isQuarIndex]}}</view>
+          </picker>
+        </view>
+        <view class="add-content">
+          <text>备注：</text>
+          <textarea auto-height="true" type="text" maxlength="100" name="remark"></textarea>
+        </view>
+        <view class="add-content">
+          <text>检疫对象：</text>
+          <picker bindchange="bindAddLiveStockChange" value="{{addLiveStockSpeciesArrIndex}}" range="{{addLiveStockSpeciesArr}}">
+            <view>{{addLiveStockSpeciesArr[addLiveStockSpeciesArrIndex]}}</view>
+          </picker>
+        </view>
+        <view class="add-content">
+          <text>检疫日期：</text>
+          <picker mode="date" value="{{date_1}}" bindchange="bindDateChange_1">
+            <view>{{date_1}}</view>
+          </picker>
+        </view>
+        <view class="image-block">
+            <view wx:if="{{localImgSrc!==''}}" class="image-view">
+                <view class="icon-delete" bindtap="delete">
+                    <image src="/image/delete.png" ></image>
+                </view>
+                <view class="icon-logo">
+                    <image src="{{localImgSrc}}" mode="aspectFit"></image>
+                </view>
+            </view>
+            <view wx:else class="btn-view">
+                <button bindtap="pickimg"> 选择图片</button>
+            </view>
+        </view>
+        <button formType="submit">提交</button>
+      </view>
+    </form>
+    <form bindsubmit="formSubmit" data-type="addSlaughter">
+      <view class="form {{index===5?'':'hide'}} fadeInUp">
+        <view class="add-content">
+          <text>屠宰对象：</text>
+          <picker bindchange="bindAddLiveStockChange" value="{{addLiveStockSpeciesArrIndex}}" range="{{addLiveStockSpeciesArr}}">
+            <view>{{addLiveStockSpeciesArr[addLiveStockSpeciesArrIndex]}}</view>
+          </picker>
+        </view>
+        <view class="add-content">
+          <text>屠宰日期：</text>
+          <picker mode="date" value="{{date_1}}" bindchange="bindDateChange_1">
+            <view>{{date_1}}</view>
+          </picker>
+        </view>
+        <view class="image-block">
+            <view wx:if="{{localImgSrc!==''}}" class="image-view">
+                <view class="icon-delete" bindtap="delete">
+                    <image src="/image/delete.png" ></image>
+                </view>
+                <view class="icon-logo">
+                    <image src="{{localImgSrc}}" mode="aspectFit"></image>
+                </view>
+            </view>
+            <view wx:else class="btn-view">
+                <button bindtap="pickimg"> 选择图片</button>
+            </view>
+        </view>
+        <button formType="submit">提交</button>
+      </view>
+    </form>
+    <form bindsubmit="formSubmit" data-type="addStorage">
+      <view class="form {{index===6?'':'hide'}} fadeInUp">
+        <view class="add-content">
+          <text>屠宰编号：</text>
+          <picker bindchange="bindSlaughterChange" value="{{slaughterArrIndex}}" range="{{slaughterArr}}">
+            <view>{{slaughterArr[slaughterArrIndex]}}</view>
+          </picker>
+        </view>
+        <view class="add-content">
+          <text>仓库：</text>
+          <picker bindchange="bindWarehouseChange" value="{{warehouseArrIndex}}" range="{{warehouseArr}}">
+            <view>{{warehouseArr[warehouseArrIndex]}}</view>
+          </picker>
+        </view>
+        <view class="add-content">
+          <text>储存日期：</text>
+          <picker mode="date" value="{{date_1}}" bindchange="bindDateChange_1">
+            <view>{{date_1}}</view>
+          </picker>
+        </view>
+        <view class="image-block">
+            <view wx:if="{{localImgSrc!==''}}" class="image-view">
+                <view class="icon-delete" bindtap="delete">
+                    <image src="/image/delete.png" ></image>
+                </view>
+                <view class="icon-logo">
+                    <image src="{{localImgSrc}}" mode="aspectFit"></image>
+                </view>
+            </view>
+            <view wx:else class="btn-view">
+                <button bindtap="pickimg"> 选择图片</button>
+            </view>
+        </view>
+        <button formType="submit">提交</button>
+      </view>
+    </form>
+  </view>

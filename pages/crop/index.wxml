@@ -1,0 +1,85 @@
+<!--作物页面-->
+<swiper class="menu-bar" current="{{currentIndex-2 <= 0 ? 0 : (currentIndex-2 > menuBar.length-5 ? menuBar.length-5 : currentIndex-2)}}" display-multiple-items="5">
+    <swiper-item  wx:for="{{menuBar}}" wx:key="{{index}}" data-index="{{index}}" class=" txt {{currentIndex===index?'show':''}}"  bindtap="swiper">{{item}}</swiper-item>
+</swiper>
+<swiper class="content" current="{{currentIndex}}" bindchange="change">
+    <swiper-item >
+        <view class="item-no" wx:if="{{types.length===0}}">--暂无作物种类！--</view>
+        <view class="item" wx:for="{{types}}" wx:key="{{item.cropTypeId}}" data-id="{{item.cropTypeId}}" data-type="croptype" bindtap="gotoDetailPage">
+            <view class="info-wrapper">
+                <view class="l">{{item.name}}</view>
+                <view class="m itdt">简介：{{item.introduction}}</view>
+              </view>
+              <image src="{{item.image}}"></image>
+        </view>
+    </swiper-item>
+    <swiper-item>
+        <view class="item-no" wx:if="{{species.length===0}}">--暂无种植记录！--</view>
+        <view class="item" wx:for="{{species}}" wx:key="{{item.plantId}}" data-id="{{item.plantId}}" data-type="planting" bindtap="gotoDetailPage">
+            <view class="info-wrapper">
+                <view class="m">{{item.plantName}}</view>
+              </view>
+              <image src="{{item.image}}"></image>
+        </view>
+    </swiper-item>
+    <swiper-item>
+        <view class="item-no" wx:if="{{fertilizer.length===0}}">--暂无施肥记录！--</view>
+        <view class="item" wx:for="{{fertilizer}}" wx:key="{{item.fertilizerId}}" data-id="{{item.fertilizerId}}" data-type="fertilizer" bindtap="gotoDetailPage">
+            <view class="info-wrapper">
+                <view class="l">{{item.fertilizerName}}</view>
+                <view class="m">施肥人：{{item.fertilizePerson}}</view>
+              </view>
+              <image src="{{item.image}}"></image>
+        </view>
+    </swiper-item>
+    <swiper-item>
+        <view class="item-no" wx:if="{{irrigation.length===0}}">--暂无灌溉记录！--</view>
+        <view class="item" wx:for="{{irrigation}}" wx:key="{{item.irrigateId}}" data-id="{{item.irrigateId}}" data-type="irrigate" bindtap="gotoDetailPage">
+            <view class="info-wrapper">
+                <view class="l">{{item.irrigationWay}}</view>
+                <view class="m">灌溉人：{{item.irrigationPerson}}</view>
+              </view>
+              <image src="{{item.image}}"></image>
+        </view>
+    </swiper-item>
+    <swiper-item>
+        <view class="item-no" wx:if="{{insectAttack.length===0}}">--暂无病虫害记录！--</view>
+        <view class="item" wx:for="{{insectAttack}}" wx:key="{{item.insectAttackId}}" data-id="{{item.insectAttackId}}" data-type="insectAttack" bindtap="goToDetailPage">
+            <view class="info-wrapper">
+                <view class="l">{{item.chuliway}}</view>
+                <view class="m">{{item.chuliperson}}</view>
+              </view>
+              <image src="{{item.image}}"></image>
+        </view>
+    </swiper-item>
+    <swiper-item>
+        <view class="item-no" wx:if="{{adopt.length===0}}">--暂无采收记录！--</view>
+        <view class="item" wx:for="{{harvest}}" wx:key="{{item.harvestId}}" data-id="{{item.harvestId}}" data-type="harvest" bindtap="goToDetailPage">
+            <view class="info-wrapper">
+                <view class="m">{{item.harvestName}}</view>
+              </view>
+              <image src="{{item.image}}"></image>
+        </view>
+    </swiper-item>
+    <swiper-item>
+        <view class="item-no" wx:if="{{workshop.length===0}}">--暂无加工记录！--</view>
+        <view class="item" wx:for="{{cropProduce}}" wx:key="{{item.cropProduceId}}" data-id="{{item.cropProduceId}}" data-type="cropProduce" bindtap="goToDetailPage">
+            <view class="info-wrapper">
+                <view class="m">{{item.cropProduceName}}</view>
+              </view>
+              <image src="{{item.image}}"></image>
+        </view>
+    </swiper-item>
+    <swiper-item>
+        <view class="item-no" wx:if="{{save.length===0}}">--暂无存储记录！--</view>
+        <view class="item" wx:for="{{storage}}" wx:key="{{item.storageId}}" data-id="{{item.storageId}}" data-type="storage" bindtap="goToDetailPage">
+            <view class="info-wrapper">
+                <view class="m">{{item.storageName}}</view>
+              </view>
+              <image src="{{item.image}}"></image>
+        </view>
+    </swiper-item>
+</swiper>
+<view class="add-btn">
+    <cover-image src="/image/add.png" bindtap="addcrop"></cover-image>
+</view>

@@ -1,0 +1,21 @@
+.panorama-page .tips {
+  font-style: italic;
+  font-size: 38rpx;
+  color: grey;
+  display: flex;
+  justify-content: center;
+}
+.panorama-page .item {
+  display: flex;
+  flex-wrap: wrap;
+}
+.panorama-page .item .item-image {
+  width: 50%;
+  padding: 20rpx 0;
+}
+.panorama-page .item .item-image image {
+  width: 95%;
+  height: 200rpx;
+  border-radius: 10rpx;
+  box-shadow: 0 5rpx 10rpx 0 #555;
+}

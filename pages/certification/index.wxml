@@ -1,0 +1,13 @@
+<!--证书页面-->
+<view class="certification-page">
+    <view wx:if="{{certification.length!==0}}" class="cetifications-item">
+        <view wx:for="{{certification}}" wx:key="{{item.certificationId}}" data-id="{{item.certificationId}}" class="certification-item" bindtap="gotodetail">
+            <view class="certification-info">{{item.certificationName}}</view>
+            <view class="certification-img"><image src="{{item.img}}"></image></view>
+        </view>
+    </view>
+    <view wx:else class="NO-certification">--暂无证书！--</view>
+   <view class="add-btn">
+    <cover-image src="/image/add.png" bindtap="addcer"></cover-image>
+    </view>
+</view>

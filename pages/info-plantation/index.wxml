@@ -1,0 +1,81 @@
+<view class="info-page">
+<view class="info-image">
+<swiper indicator-dots="true" indicator-active-color="#fff" autoplay="true" circular="true" duration="2000"> 
+  <swiper-item wx:for="{{imgUrls}}" wx:key="{{item.id}}">
+  <image src="{{item}}" style="width: {{imageWidth}}px;"></image>
+  </swiper-item>
+</swiper>
+</view>
+<view class="info-name">
+<view class="siteName">{{sitename}}</view>
+<view class="sitelocation">{{sitecounty}}/{{sitelocation}}</view>
+</view>
+<view class="navigation-block">
+<view class="navigation" bindtap="gotositemap">
+  <view class="group">
+    <image src="/image/map.png"></image>
+    <text>农场地图</text>
+  </view>
+  <view class="turnto">
+    <image src="/image/turnto.png"></image>
+  </view>
+</view>
+<view class="navigation" bindtap="gotoall">
+  <view class="group">
+    <image src="/image/quanjingtu.png"></image>
+    <text>全景图</text>
+  </view>
+  <view class="turnto">
+    <image src="/image/turnto.png"></image>
+  </view>
+</view>
+<view class="navigation" bindtap="gotovedio">
+  <view class="group">
+    <image src="/image/shipin.png"></image>
+    <text>农场视频</text>
+  </view>
+  <view class="turnto">
+    <image src="/image/turnto.png"></image>
+  </view>
+</view>
+</view>
+<view class="info-farm">
+<view class="info-farm-label">
+<view bindtap="click" data-index="0">基本信息</view>
+<view bindtap="click" data-index="1">农场简介</view>
+</view>
+<swiper current="{{currentIndex}}" bindtap="change">
+<swiper-item >
+<view>名称：{{sitename}}</view>
+<view>省份：{{siteprovince}}</view>
+<view>城市：{{sitecity}}</view>
+<view>区/县：{{sitecounty}}</view>
+<view>详细地址：{{sitelocation}}</view>
+<view>农场面积：{{sitesquare}}</view>
+</swiper-item>
+ <swiper-item>
+ <text>简介：{{siteremarks}}</text>
+ </swiper-item> 
+ </swiper>
+</view>
+<view class="items-block">
+  <view class="title">
+    <text>地块</text>
+  </view>
+  <view>
+    <view class="tip" wx:if="{{places.length === 0}}">--此农场暂无地块--</view>
+    <view class="itemswrapper" wx:else>
+      <view class="items">
+        <view class="item" wx:for="{{places}}" data-id="{{item.placeId}}" wx:key="{{item.placeId}}" bindtap="goToPlacePage">
+          <image src="{{imageUrl}}{{item.image}}"></image>
+          <view class="detail">
+            <text>地块名：{{item.placeName}}</text>
+            <text>种植/养殖：{{item.crop}}</text>
+          </view>
+        </view>
+      </view>
+      <view class="tip">--已经到底了！--</view>
+    </view>
+  </view>
+</view>
+</view>

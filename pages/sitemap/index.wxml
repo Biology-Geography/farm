@@ -1,0 +1,10 @@
+<map id="map" longitude="{{coordinate.lng}}" 
+              latitude="{{coordinate.lat}}" 
+              scale="17" polygons="{{polygons}}" 
+              style="width: 100%; height: 100vh;"
+              enable-satellite 
+              enable-rotate 
+              enable-overlooking 
+              show-compass 
+              show-scale>
+</map>

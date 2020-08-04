@@ -1,0 +1,15 @@
+<view class="detail-page">
+    <view class="detail-id">编号：0{{id}}</view>
+    <view class="detail-brief">
+        <view>{{name}}</view>
+        <view>简介：{{remark}}</view>
+    </view>
+    <view class="detail-image">
+        <image src="{{img}}"></image>
+    </view>
+</view>
+<view>
+    <button bindtap="delete">删除</button>
+</view>
+    
+

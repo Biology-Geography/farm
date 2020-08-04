@@ -1,0 +1,21 @@
+<!--注册页面-->
+<view class="register-user">
+    <view class="register-info">
+    <form class="register-form" bindsubmit="getForm">
+    <view class="f1"><label>账号名称：</label><input type="text" name="nickName" maxlength="15" bindblur="inputname"></input></view>
+    <view class="f1"><label>账号密码：</label><input type="password" name="userpsd"></input></view>
+    <view class="inpbox">
+          <label>用户性别：</label>       
+          <radio-group bindchange="radioChange" class="inp-radiogroup" name="usersex">
+            <view class="radiobox" wx:for="{{sex}}" wx:key="id">
+              <radio value="{{item.id}}" color="#2e8b57" checked="{{item.checked}}" ></radio>
+              <view class="radiotxt" color="white" >{{item.value}}</view>
+            </view>
+          </radio-group>          
+    </view>
+    <view class="f1"><label>电话号码：</label><input type="number" maxlength="11" name="usernum"></input></view>
+    <view class="f1"><label>电子邮箱：</label><input type="email" name="useremail"></input></view>
+    <view class="register-btn"><button formType="submit" bindtap="getData">注册</button></view>
+    </form>
+    </view>
+</view>

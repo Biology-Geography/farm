@@ -1,0 +1,9 @@
+.video-page .item {
+  display: flex;
+}
+.video-page .tips {
+  font-style: italic;
+  color: grey;
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,47 @@
+<!--添加证书的页面-->
+<view class="add-page">
+    <form bindsubmit="formSubmit">
+        <view class="add-content">
+            <view class="add-label">证书种类：</view>
+            <view class="add-input">
+            <picker bindchange="bindPickerChange1" value="{{cindex}}" range="{{categoryArr}}">
+                <view>{{categoryArr[cindex]}}</view>
+            </picker>
+            </view>
+        </view>
+        <view class="add-content">
+            <view class="add-label">证书对象：</view>
+            <view class="add-input">
+            <picker bindchange="bindPickerChange2" value="{{gindex}}" range="{{objectArr}}">
+                <view >{{objectArr[gindex]}}</view>
+            </picker>
+            </view>
+        </view>
+        <view class="add-content">
+            <view class="add-label">证书名称：</view>
+            <view class="add-input"><input name="name" type="text"></input></view>
+        </view>
+        <view class="add-content">
+            <view class="add-label">所属企业：</view>
+            <view class="add-input">
+            <picker bindchange="bindPickerChange3" value="{{eindex}}" range="{{enterprise}}">
+                <view>{{enterprise[eindex]}}</view>
+            </picker>
+            </view>
+        </view>
+        <view class="image-block">
+            <view wx:if="{{localImgSrc!==''}}" class="image-view">
+                <view class="icon-delete" bindtap="delete">
+                    <image src="/image/delete.png"></image>
+                </view>
+                <view class="icon-logo">
+                    <image src="{{localImgSrc}}" mode="aspectFit"></image>
+                </view>
+            </view>
+        <view wx:else class="btn-view">
+            <button bindtap="pickimg"> 选择图片 </button>
+        </view>
+    </view>
+        <button formType="submit"> 提交 </button>
+    </form>
+</view>

@@ -1,0 +1,9 @@
+<view class="panorama-page">
+    <view wx:if="{{panorama.length}}" class="item">
+        <view class="tips">长按图片复制全景图网址后前往浏览器打开！</view>
+        <view wx:for="{{panorama}}" data-url="{{item.overallURL}}" wx:key="{{item.id}}" bindtap="copy" class="item-image">
+            <image src="{{imageUrl}}{{item.image}}"></image>
+        </view>
+    </view>
+    <view wx:else class="tips">暂无全景图！</view>
+</view>

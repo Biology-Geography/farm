@@ -1,0 +1,51 @@
+.user-content {
+  display: flex;
+  border: 1px solid #c9cfe0;
+  height: 100rpx;
+  margin-top: 3px;
+  justify-content: space-between;
+  align-items: center;
+}
+.user-content label {
+  font-size: 38rpx;
+  color: grey;
+  font-family: "黑体";
+  padding-left: 30px;
+}
+.user-content .user-image {
+  display: flex;
+  align-items: center;
+}
+.user-content .user-image .image1 {
+  width: 90rpx;
+  height: 90rpx;
+  padding-right: 20px;
+}
+.user-content .user-image .image2 {
+  width: 30rpx;
+  height: 30rpx;
+}
+.user-content .user-image .image3 {
+  padding-right: 20px;
+  width: 40rpx;
+  height: 40rpx;
+}
+.user-content1 {
+  display: flex;
+  border: 1px solid #c9cfe0;
+  margin-top: 3px;
+  height: 100rpx;
+  justify-content: space-between;
+  align-items: center;
+}
+.user-content1 label {
+  font-size: 38rpx;
+  color: grey;
+  font-family: "黑体";
+  padding-left: 30px;
+}
+.user-content1 text {
+  font-size: 38rpx;
+  color: grey;
+  padding-right: 30px;
+}

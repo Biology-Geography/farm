@@ -1,0 +1,16 @@
+
+    <map id="myMap" class="maMap" subkey="BADBZ-QNDRG-ON3QE-I7UPD-IIS37-OOBJQ" 
+    scale="6" longitude="117.131825" latitude="31.492130" markers="{{markers}}" 
+    enable-overlooking="true" show-compass="true" enable-rotate="true" show-scale="true"
+     bindcallouttap="btnGo">
+    </map>
+    <cover-view class="icon-wrapper">
+      <cover-view>
+        <navigator url="/pages/search/index"><cover-image src="/image/sousuo.png"></cover-image></navigator>
+      </cover-view>
+      <cover-view>
+        <cover-image src="/image/saoyisao.png" bindtap="scan"></cover-image>
+      </cover-view>
+    </cover-view>
+
+

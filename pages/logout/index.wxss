@@ -1,0 +1,6 @@
+view button {
+  background-color: white;
+  color: grey;
+  font-family: "宋体";
+  font-weight: bolder;
+}

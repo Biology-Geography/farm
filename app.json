@@ -1,0 +1,63 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/Detail-Page/index",
+    "pages/sitemap/index",
+    "pages/register/index",
+    "pages/crop1/index",
+    "pages/place/index",
+    "pages/crop/index",
+    "pages/panorama/index",
+    "pages/vedio/index",
+    "pages/certification/index", 
+    "pages/certification-detail/index",
+    "pages/certification1/index",
+    "pages/warehouse/index",
+    "pages/warehouse1/index",
+    "pages/goods/index",
+    "pages/goods-detail/index",
+    "pages/search/index",  
+    "pages/info-plantation/index",
+    "pages/get/index",
+    "pages/warehouse-detail/index",
+    "pages/cow/index",
+    "pages/mushroom/index",
+    "pages/mushroom1/index",
+    "pages/mypage/index",
+    "pages/edit/index",
+    "pages/logout/index",
+    "pages/enterprise/index",
+    "pages/enterprise2/index",
+    "pages/enterprise1/index",
+    "pages/plantatiton/index",
+    "pages/area/index",
+    "pages/userqrcode/index",
+    "pages/cow1/index",
+    "pages/add-goods/index",
+    "pages/login/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#2e8b57",
+    "navigationBarTitleText": "智慧农场溯源系统",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "backgroundColor": "#2e8b57",
+    "selectedColor": "#000000",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "地图",
+      "iconPath": "image/地图-0.png",
+      "selectedIconPath": "image/地图-1.png"
+    },
+    {
+      "pagePath": "pages/mypage/index",
+      "text": "我的",
+      "iconPath": "image/我的-0.png",
+      "selectedIconPath": "image/我的-1.png"
+    }
+  ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

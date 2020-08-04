@@ -1,0 +1,18 @@
+<!--企业页面-->
+<view class="enterprise-page">
+  <view class="enterprise-info">
+    <view wx:if="{{enterprise}}" class="enterprise-layer">
+      <view class="item" wx:for="{{enterprise}}" wx:key="{{item.entId}}" data-entId="{{item.entId}}"
+      bindtap="goToEntInfoPage">
+        <view class="content">
+          <image src="{{item.image}}"></image>
+          <view class="info"><text>{{item.entName}}</text></view>
+        </view>
+        </view>
+    </view>
+    <view wx:else class="NO-enterprise">--暂无企业!--</view>
+  </view>
+  <view class="add-btn">
+    <cover-image src="/image/add.png" bindtap="addenterprise"></cover-image>
+  </view>
+</view>

@@ -1,0 +1,16 @@
+<!--仓库页面-->
+<view class="warehouse-page">
+    <view wx:if="{{warehouses.length!==0}}" class="warehouses-item">
+        <view wx:for="{{warehouses}}" wx:key="{{item.id}}" data-id="{{item.id}}" data-type="warehouse" class="warehouse-item" bindtap="gotodetail">
+            <view class="warehouse-info">
+                <view>{{item.name}}</view>
+                <view>{{item.remark}}</view>
+            </view>
+            <view class="warehouse-img"><image src="{{imgUrl}}{{item.image}}"></image></view>
+        </view>
+    </view>
+    <view wx:else class="NO-warehouses">--暂无仓库！--</view>
+    <view class="btn-add">
+        <cover-image src="/image/add.png" bindtap="addwarehouses"></cover-image>
+    </view>
+</view>

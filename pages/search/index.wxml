@@ -1,0 +1,44 @@
+<view class="search-page">
+    <view class="search-navi">
+    <input type="text" placeholder='  默认搜索全部内容!' bindinput="inputKey"></input>
+    <button size="mini" bindtap='btnclick'>搜索</button>
+    </view>
+    <view>
+        <view wx:if="{{keyword}}" class="search-item1">
+            <view wx:if="{{keyword=='  默认搜索全部内容!'}}" class="search-content1">
+            <view wx:for="{{plantation}}" wx:for-item="item">         
+                    <view class="search-text1" bindtap="btnview" data-bean="{{item}}">
+                        <text>{{item.siteName}}</text>
+                        <text>{{item.province}}-{{item.city}}-{{item.country}}{{item.location}}</text>
+                    </view>
+                    <image src="{{imgUrl}}{{item.image}}"></image>
+            </view>
+            </view>
+            <view  wx:else class="search-content2">
+                <view wx:for="{{search}}" wx:for-item="item">
+                    <view class="search-text2" bindtap="btnview" data-bean="{{item}}">
+                        <text>{{item.siteName}}</text>
+                        <text>{{item.province}}{{item.city}}{{item.country}}{{item.location}}</text>
+                    </view>
+                    <image src="{{imgUrl}}{{item.image}}"></image>
+            </view>
+            </view>
+        </view>
+    <view wx:else class="search-record">
+        <view wx:if="{{record}}">
+            <view class="search-block">
+                <cover-image src="/image/lajitong.png" bindtap="delete"></cover-image>
+            </view>
+            <view class="search-layer">
+               <view wx:for="{{record}}" wx:for-item="item">
+                   <text>{{item.keyword}}</text>
+               </view>
+            </view>
+            <view class="search-label"><label>------历史记录------</label></view>
+        </view>
+        <view wx:else>
+            <view class="No-record"><label>暂无历史记录！</label></view>
+        </view>
+    </view>
+    </view>
+</view>

@@ -1,0 +1,26 @@
+.menu-bar {
+  background-color: lightsteelblue;
+  height: 30px;
+}
+.menu-bar .txt {
+  display: flex;
+  justify-content: center ;
+  align-items: center;
+}
+.menu-bar .show {
+  color: #0d2f8a;
+}
+.content swiper-item .item-no {
+  font-weight: bolder;
+  font-style: italic;
+  color: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.add-btn cover-image {
+  width: 100rpx;
+  height: 100rpx;
+  float: right;
+  margin-top: 80%;
+}

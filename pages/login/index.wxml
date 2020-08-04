@@ -1,0 +1,18 @@
+<view class="id_name">
+    <label class="label1">智慧农场溯源系统</label>
+<view class="user_name">
+    <label>账号：</label>
+    <input type="text" name="Username" bindinput="inputname"> </input>
+</view>
+<view class="user_password">
+    <label>密码：</label>
+    <input type="password" name="Userpsd" bindinput="inputpsd"></input>
+</view>
+<view class="btn">
+    <button class="btn_1"  bindtap="handlelogin">账号登录</button>
+    <button class="btn_2" open-type="getUserInfo" bindgetuserinfo="handleGetUserInfo">微信登录</button>
+</view>
+<view class="user-register">
+<navigator url="/pages/register/index"><label>若无账号，请注册</label></navigator>
+</view>
+</view>

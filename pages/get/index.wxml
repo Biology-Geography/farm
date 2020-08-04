@@ -1,0 +1,15 @@
+<!--认领页面-->
+<view class="get-page">
+    <view class="get-content" wx:if="{{places}}">
+        <view class="items" wx:for="{{places}}" data-placeid="{{item.placeId}}" data-siteid="{{item.siteId}}" data-entid="{{item.entId}}" bindtap="gotodetail">
+            <view class="item-entName">{{item.entName}}</view>
+            <view class="item-content">
+                <view>基地：{{item.siteName}}</view>
+                <view>地块：{{item.placeName}}</view>
+            </view>
+        </view>
+    </view>
+    <view wx:else class="NO-getArea">
+        <view>--您暂时未认领地块！--</view>
+    </view>
+</view>

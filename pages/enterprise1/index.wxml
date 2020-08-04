@@ -1,0 +1,34 @@
+<view class="add-page">
+    <form bindsubmit="formSubmit">
+        <view class="add-enterprise">
+            <label>企业名称:</label>
+            <input name="name" type="text"></input>
+        </view>
+        <view class="add-address">
+            <label>地址：</label>
+            <picker mode="region" bindchange="bindRegionChange" value="{{region}}" >
+                <view class="picker">
+                  {{region[0]}}/{{region[1]}}/{{region[2]}}
+                </view>
+              </picker>
+        </view>
+        <view class="add-detail">
+            <label>详细地址：</label>
+            <textarea name="location"></textarea>
+        </view>
+        <view class="image-block">
+            <view wx:if="{{localImgSrc!==''}}" class="image-view">
+                <view class="icon-delete" bindtap="delete">
+                    <image src="/image/delete.png" ></image>
+                </view>
+                <view class="icon-logo">
+                    <image src="{{localImgSrc}}" mode="aspectFit"></image>
+                </view>
+            </view>
+            <view wx:else class="btn-view">
+                <button bindtap="pickimg"> 企业的LOGO </button>
+            </view>
+        </view>
+        <button formType="submit"> 提交 </button>
+    </form>
+</view>

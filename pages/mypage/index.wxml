@@ -1,0 +1,99 @@
+
+
+<view class="user_info_wrap">
+    <view wx:if="{{userinfo.avatarUrl}}" class="user_img_wrap">
+      <view class="user_info_group">
+      <image class="user_icon" src="{{userinfo.avatarUrl}}"></image>
+      <view class="user_name">{{userinfo.nickName}}</view>
+      <cover-image class="user_erweima" src="/image/erweima.png"></cover-image>
+      </view>
+      <cover-view class="user_info_symbol1">
+        <button bindtap="ToEnterprise"><cover-image src="/image/qiye.png"></cover-image></button>
+        <button bindtap="ToPlantatiton"><cover-image src="/image/jidi.png"></cover-image></button>
+        <button bindtap="ToArea"><cover-image src="/image/dikuai.png"></cover-image></button>
+        <button bindtap="ToCrop"><cover-image src="/image/zuowu.png"></cover-image></button>
+      </cover-view>
+      <view class="user_info_biaoyu1">
+          <label>企业</label>
+          <label>基地</label>
+          <label>地块</label>
+          <label>作物</label>
+          </view>
+          <cover-view class="user_info_symbol2">
+            <button bindtap="ToMushroom"><cover-image src="/image/junlei.png"></cover-image></button>
+            <button bindtap="ToCow"><cover-image src="/image/shengxu.png"></cover-image></button>
+            <button bindtap="ToGoods"><cover-image src="/image/shangpin.png"></cover-image></button>
+            <button bindtap="ToWarehouse"><cover-image src="/image/cangku.png"></cover-image></button>
+        </cover-view>
+        <view class="user_info_biaoyu2">
+            <label>菌类</label>
+            <label>牲畜</label>
+            <label>商品</label>
+            <label>仓库</label>
+            </view>
+            <cover-view class="user_info_symbol3">
+                <button bindtap="ToCertification"><cover-image src="/image/zhengshu.png"></cover-image></button>
+                <button bindtap="ToGet"><cover-image src="/image/renling.png"></cover-image></button>
+                <button bindtap="ToScan"><cover-image src="/image/saoma.png"></cover-image></button>
+                <button bindtap="logout"><cover-image src="/image/shezhi.png"></cover-image></button>
+            </cover-view>
+            <view class="user_info_biaoyu3">
+                <label>证书</label>
+                <label>认领</label>
+                <label>扫码</label>
+                <label>设置</label>
+                </view>
+  </view>
+  <view wx:elif="{{userinfo._id}}" class="user-login-psd-wrap">    
+      <view class="user-login-group">
+          <image class="user-login-icon" src="{{userinfo.userimage}}" bindtap="changeimage"></image>
+          <view class="user-login-name">
+              <view>{{userinfo.nickName}}</view>
+              <view style="font-size:35rpx;">{{userinfo.useremail}}</view>
+            </view>
+          <cover-image class="user_erweima" src="/image/erweima.png"></cover-image>
+        </view>
+        <cover-view class="user_info_symbol1">
+            <button bindtap="ToEnterprise"><cover-image src="/image/qiye.png"></cover-image></button>
+            <button bindtap="ToPlantatiton"><cover-image src="/image/jidi.png"></cover-image></button>
+            <button bindtap="ToArea"><cover-image src="/image/dikuai.png"></cover-image></button>
+            <button bindtap="ToCrop"><cover-image src="/image/zuowu.png"></cover-image></button>
+          </cover-view>
+          <view class="user_info_biaoyu1">
+              <label>企业</label>
+              <label>基地</label>
+              <label>地块</label>
+              <label>作物</label>
+              </view>
+              <cover-view class="user_info_symbol2">
+                <button bindtap="ToMushroom"><cover-image src="/image/junlei.png"></cover-image></button>
+                <button bindtap="ToCow"><cover-image src="/image/shengxu.png"></cover-image></button>
+                <button bindtap="ToGoods"><cover-image src="/image/shangpin.png"></cover-image></button>
+                <button bindtap="ToWarehouse"><cover-image src="/image/cangku.png"></cover-image></button>
+            </cover-view>
+            <view class="user_info_biaoyu2">
+                <label>菌类</label>
+                <label>牲畜</label>
+                <label>商品</label>
+                <label>仓库</label>
+                </view>
+                <cover-view class="user_info_symbol3">
+                    <button bindtap="ToCertification"><cover-image src="/image/zhengshu.png"></cover-image></button>
+                    <button bindtap="ToGet"><cover-image src="/image/renling.png"></cover-image></button>
+                    <button bindtap="ToScan"><cover-image src="/image/saoma.png"></cover-image></button>
+                    <button bindtap="logout"><cover-image src="/image/shezhi.png"></cover-image></button>
+                </cover-view>
+                <view class="user_info_biaoyu3">
+                    <label>证书</label>
+                    <label>认领</label>
+                    <label>扫码</label>
+                    <label>设置</label>
+                    </view>
+  </view>
+   <view wx:else class="No_login">
+    <navigator url="/pages/login/index">
+        <image  class="img_login" src="/image/no-login.png"></image>
+        <label>您尚未登录！</label>
+    </navigator>
+</view>
+</view>

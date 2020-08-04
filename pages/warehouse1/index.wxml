@@ -1,0 +1,36 @@
+<view class="add-page">
+    <form bindsubmit="formSubmit">
+        <view class="add-content">
+            <view class="txt">仓库名称：</view>
+            <view class="add-input"><input type="text" name="name"></input></view>
+        </view>
+        <view class="add-content">
+            <view class="txt">备注内容：</view>
+            <view class="add-input"><input type="text" name="brief"></input></view>
+        </view>
+        <view class="add-content">
+            <view class="txt">所属企业：</view>
+            <view class="add-input">
+                <picker bindchange="bindPickerChange" value="{{index}}" range="{{enterprise}}" >
+                    <view class="picker">
+                    {{enterprise[index]}}                     
+                    </view>
+                  </picker>
+            </view>
+        </view>
+        <view class="image-block">
+            <view wx:if="{{localImgSrc!==''}}" class="image-view">
+                <view class="icon-delete" bindtap="delete">
+                    <image src="/image/delete.png" ></image>
+                </view>
+                <view class="icon-logo">
+                    <image src="{{localImgSrc}}" mode="aspectFit"></image>
+                </view>
+            </view>
+            <view wx:else class="btn-view">
+                <button bindtap="pickimg"> 选择图片</button>
+            </view>
+        </view>
+        <button formType="submit">提交</button>
+    </form>
+</view>

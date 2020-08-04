@@ -1,0 +1,75 @@
+<!--养殖页面-->
+<swiper class="menu-bar" current="{{currentIndex-2 <= 0 ? 0 : (currentIndex-2 > menuBar.length-5 ? menuBar.length-5 : currentIndex-2)}}" display-multiple-items="5">
+    <swiper-item wx:for="{{menuBar}}" wx:key="{{index}}" data-index="{{index}}" class=" txt {{currentIndex === index?'show':''}}" bindtap="swiper">{{item}}</swiper-item>
+</swiper>
+<swiper class="content" current="{{currentIndex}}" bindchange="change">
+    <swiper-item >
+        <view class="item-no" wx:if="{{types.length===0}}">--暂无牲畜种类！--</view>
+        <view class="item" wx:for="{{types}}" wx:key="{{item.livestockId}}" data-id="{{item.livestockId}}" data-type="livestock" bindtap="goToDetailPage">
+            <view class="info-wrapper">
+                <view class="l">{{item.livestockName}}</view>
+                <view class="m itdt">{{item.itdt}}</view>
+              </view>
+              <image src="{{item.image}}"></image>
+        </view>
+    </swiper-item>
+    <swiper-item>
+        <view class="item-no" wx:if="{{intocircle.length===0}}">--暂无入圈记录！--</view>
+        <view class="item" wx:for="{{intocircle}}" wx:key="{{item.id}}" data-id="{{item.id}}" data-type="addLivestock" bindtap="goToDetailPage">
+            <view class="info-wrapper">
+                <view class="m">{{item.name}}</view>
+              </view>
+              <image src="{{item.image}}"></image>
+        </view>
+    </swiper-item>
+    <swiper-item>
+        <view class="item-no" wx:if="{{food.length===0}}">--暂无饲料记录！--</view>
+        <view class="item" wx:for="{{food}}" wx:key="{{item.id}}" data-id="{{item.id}}" data-type="feed" bindtap="goToDetailPage">
+            <view class="info-wrapper">
+                <view class="l">{{item.type}}</view>
+                <view class="m">{{item.number}}斤</view>
+              </view>
+              <image src="{{item.image}}"></image>
+        </view>
+    </swiper-item>
+    <swiper-item>
+        <view class="item-no" wx:if="{{vaccum.length===0}}">--暂无疫苗记录！--</view>
+        <view class="item" wx:for="{{vaccum}}" wx:key="{{item.id}}" data-id="{{item.id}}" data-type="yimiao" bindtap="goToDetailPage">
+            <view class="info-wrapper">
+                <view class="l">{{item.name}}</view>
+              </view>
+              <image src="{{item.image}}"></image>
+        </view>
+    </swiper-item>
+    <swiper-item>
+        <view class="item-no" wx:if="{{checkinfect.length===0}}">--暂无检疫记录！--</view>
+        <view class="item" wx:for="{{checkinfect}}" wx:key="{{item.id}}" data-id="{{item.id}}" data-type="quarantine" bindtap="goToDetailPage">
+            <view class="info-wrapper">
+                <view class="l">是否合格：{{item.isQuar}}</view>
+                <view class="m">{{item.remark}}</view>
+              </view>
+              <image src="{{item.image}}"></image>
+        </view>
+    </swiper-item>
+    <swiper-item>
+        <view class="item-no" wx:if="{{kill.length===0}}">--暂无屠宰记录！--</view>
+        <view class="item" wx:for="{{kill}}" wx:key="{{item.id}}" data-id="{{item.id}}" data-type="slaughter" bindtap="goToDetailPage">
+            <view class="info-wrapper">
+                <view class="m">{{item.name}}</view>
+              </view>
+              <image src="{{item.image}}"></image>
+        </view>
+    </swiper-item>
+    <swiper-item>
+        <view class="item-no" wx:if="{{save.length===0}}">--暂无存储记录！--</view>
+        <view class="item" wx:for="{{save}}" wx:key="{{item.storageId}}" data-id="{{item.storageId}}" data-type="storage" bindtap="goToDetailPage">
+            <view class="info-wrapper">
+                <view class="m">{{item.storageName}}</view>
+              </view>
+              <image src="{{item.image}}"></image>
+        </view>
+    </swiper-item>
+</swiper>
+<view class="add-btn">
+    <cover-image src="/image/add.png" bindtap="addcow"></cover-image>
+</view>

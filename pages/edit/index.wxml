@@ -1,0 +1,18 @@
+     <view class="user-content">
+        <label>头像</label>
+        <view class="user-image">
+            <image src="{{userimageUrl}}"class="image1"></image>
+            <image src="/image/turnto.png" class="image2" bindtap="changeimage" ></image>
+        </view>
+    </view>
+    <view class="user-content1">
+        <label>用户名</label>
+        <text>{{username}}</text>
+    </view>
+    <view class="user-content" bindtap="goToUserQRCodePage">
+        <label>用户名片</label>
+        <view  class="user-image">
+            <image src="/image/erweimaicon.png" class="image3"></image>
+            <image src="/image/turnto.png" class="image2"></image>
+        </view>
+    </view>

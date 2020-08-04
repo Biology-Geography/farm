@@ -1,0 +1,21 @@
+.get-page .get-content .items {
+  margin-top: 10px;
+  border-bottom: 1px solid rgba(13, 47, 138, 0.5);
+}
+.get-page .get-content .items .item-entName {
+  font-size: 40rpx;
+}
+.get-page .get-content .items .item-content {
+  font-size: 35rpx;
+  color: #949699;
+  margin-bottom: 10px;
+}
+.get-page .NO-getArea {
+  margin-top: 10px;
+  font-weight: bolder;
+  font-style: italic;
+  color: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

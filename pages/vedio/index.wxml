@@ -1,0 +1,8 @@
+<view class="video-page">
+    <view class="item" wx:if="{{video.length}}">
+        <view wx:for="{{video}}" wx:key="{{item.id}}" class="item-video">
+            <video src="{{item.videoUrl}}" controls autoplay="true"></video>
+        </view>
+    </view>
+    <view wx:else class="tips">暂无视频！</view>
+</view>

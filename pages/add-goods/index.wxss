@@ -1,0 +1,40 @@
+.add-page .add-content {
+  margin-left: 10px;
+  margin-top: 10px;
+  display: flex;
+}
+.add-page .add-content .txt {
+  width: 25%;
+  font-size: 35rpx;
+}
+.add-page .add-content .add-input {
+  width: 75%;
+  border: 1px solid rgba(13, 47, 138, 0.5);
+  height: 30px;
+  text-align: right;
+}
+.add-page .image-block {
+  margin-top: 10px;
+}
+.add-page .image-block .image-view {
+  background-color: lavenderblush;
+  height: 250px;
+}
+.add-page .image-block .image-view .icon-delete {
+  float: right;
+}
+.add-page .image-block .image-view .icon-delete image {
+  width: 100rpx;
+  height: 100rpx;
+}
+.add-page .image-block .image-view .icon-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.add-page button {
+  background-color: rgba(13, 47, 138, 0.5);
+  color: #fff;
+  width: 100%;
+  margin-top: 50rpx;
+}

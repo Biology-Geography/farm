@@ -1,0 +1,67 @@
+.header {
+  padding: 20rpx 25rpx;
+  background-color: #2e8b57;
+}
+.header .picker {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .picker text {
+  display: block;
+  color: white;
+  font-size: 35rpx;
+}
+.header .picker image {
+  width: 50rpx;
+  height: 50rpx;
+}
+.forms .form .add-content {
+  margin-top: 10px;
+  display: flex;
+}
+.forms .form .add-content text {
+  width: 25%;
+  display: flex;
+  flex-shrink: 0;
+  font-size: 33rpx;
+}
+.forms .form .add-content input,
+.forms .form .add-content textarea,
+.forms .form .add-content picker {
+  width: 75%;
+  border: 1px solid rgba(13, 47, 138, 0.5);
+  border-radius: 5rpx;
+  padding: 10rpx 15rpx;
+  text-align: right;
+  font-size: 33rpx;
+}
+.forms .form .image-block {
+  margin-top: 10px;
+}
+.forms .form .image-block .image-view {
+  background-color: lavenderblush;
+  height: 250px;
+}
+.forms .form .image-block .image-view .icon-delete {
+  float: right;
+}
+.forms .form .image-block .image-view .icon-delete image {
+  width: 100rpx;
+  height: 100rpx;
+}
+.forms .form .image-block .image-view .icon-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.forms button {
+  background-color: rgba(13, 47, 138, 0.5);
+  color: #fff;
+  width: 100%;
+  margin-top: 50rpx;
+}
+.forms .hide {
+  display: none;
+}
