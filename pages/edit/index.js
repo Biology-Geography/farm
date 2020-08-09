@@ -56,7 +56,7 @@ Page({
   },
   goToUserQRCodePage(){
     wx.navigateTo({
-      url:'/pages/userqrcode/index?userId='+this.data.userId
+      url:'/pages/userqrcode/index?username='+this.data.username + '&userimage='+ this.data.userimageUrl
     })
   }
 })

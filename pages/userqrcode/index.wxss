@@ -1,1 +1,30 @@
-/* pages/userqrcode/index.wxss */
+page {
+  width: 100%;
+  height: 100%;
+}
+.Qr-page {
+  width: 100%;
+  height: 100%;
+}
+.Qr-page .Qr-info {
+  margin-top: 25%;
+  display: flex;
+}
+.Qr-page .Qr-info .Qr_Img image {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 25%;
+}
+.Qr-page .Qr-info .Qr-Name {
+  font-size: 40rpx;
+}
+.Qr-page .Qr-code .Qr-Image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Qr-page .Qr-code .Qr-label label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
