@@ -1,2 +1,10 @@
-<!--pages/userqrcode/index.wxml-->
-<text>pages/userqrcode/index.wxml</text>
+<view class="Qr-page">
+    <view class="Qr-info">
+        <view class="Qr-Img"><image class="userImg" src="{{userimage}}"></image></view>
+        <view class="Qr-Name"><label>{{user.userName}}</label></view>
+    </view>
+    <view class="Qr-code">
+        <view class="Qr-Image"><image src="{{qrCodeImageUrl}}"></image></view>
+        <view class="Qr-label"><label>用户信息二维码</label></view>
+    </view>
+</view>
