@@ -1,99 +1,64 @@
-.search-page {
-  width: 100%;
-  height: 100%;
-  flex-direction: column;
-}
-.search-page .search-navi {
-  background-color: #2e8b57;
+.search-navi {
   display: flex;
+  justify-content: space-between;
+  background-color: #2e8b57;
+  height: 100rpx;
 }
-.search-page .search-navi input {
-  width: 80%;
-  height: 32px;
-  border: 2px solid #a9a9a9;
+.search-navi .search-nav1 {
+  display: flex;
+  border: 1px solid #e4e2e2;
+  width: 75%;
+  height: 80rpx;
+  background-color: white;
+  border-radius: 50rpx;
+  align-items: center;
+}
+.search-navi .search-nav1 image {
+  width: 50rpx;
+  height: 50rpx;
+}
+.search-navi .search-nav1 input {
+  font-size: 35rpx;
+}
+.search-navi button {
+  height: 80rpx;
+  border: 0;
   background-color: #fff;
-  border-radius: 25px;
+  color: #a5a4a4;
+  font-size: 30rpx;
+  margin-right: 10px;
+  padding: 0 20rpx;
+  display: flex;
+  align-items: center;
 }
-.search-page .search-navi button {
-  background-color: #fff;
-  border-radius: 15px;
-  border: 2px solid #a9a9a9;
+.search-record .search-block {
+  display: flex;
+  justify-content: space-between;
 }
-.search-page .search-record .search-block {
-  width: 100%;
-  height: 70rpx;
+.search-record .search-block label {
+  font-size: 40rpx;
+  font-style: italic;
+  color: #a7a4a4;
 }
-.search-page .search-record .search-block cover-image {
+.search-record .search-block cover-image {
   width: 70rpx;
   height: 70rpx;
-  float: right;
 }
-.search-page .search-record .search-layer {
+.search-record .search-layer {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
 }
-.search-page .search-record .search-layer view {
+.search-record .search-layer view {
   width: 200rpx;
   height: 100rpx;
 }
-.search-page .search-record .search-layer view text {
+.search-record .search-layer view text {
   font-family: "宋体";
-  color: grey;
 }
-.search-page .search-record .search-label {
-  margin-top: 30px;
-  color: grey;
-  text-align: center;
-}
-.search-page .search-record .No-record {
-  margin-top: 30px;
-  color: grey;
-  font-weight: bolder;
-  text-align: center;
-}
-.search-page .search-item1 {
-  width: 100%;
-}
-.search-page .search-item1 .search-content1 view {
-  border-bottom: 1px solid #485bc9;
+.search-record .tip {
+  margin-top: 10px;
   display: flex;
-  height: 200rpx;
-}
-.search-page .search-item1 .search-content1 view image {
-  margin-top: 25rpx;
-  margin-right: 10rpx;
-  border: 1px solid rgba(13, 47, 138, 0.5);
-  box-shadow: 0px 2px 3px #747eb9;
-  border-radius: 15rpx;
-  width: 25%;
-  height: 150rpx;
-}
-.search-page .search-item1 .search-content1 view .search-text1 {
-  flex-direction: column;
-  width: 75%;
-}
-.search-page .search-item1 .search-content1 view .search-text1 text {
-  font-family: "宋体";
-}
-.search-page .search-item1 .search-content2 view {
-  border-bottom: 1px solid grey;
-  display: flex;
-  height: 200rpx;
-}
-.search-page .search-item1 .search-content2 view image {
-  margin-top: 25rpx;
-  margin-right: 10rpx;
-  border: 1px solid rgba(13, 47, 138, 0.5);
-  box-shadow: 0px 2px 3px #747eb9;
-  border-radius: 15rpx;
-  width: 25%;
-  height: 150rpx;
-}
-.search-page .search-item1 .search-content2 view .search-text2 {
-  flex-direction: column;
-  width: 75%;
-}
-.search-page .search-item1 .search-content2 view .search-text2 text {
-  font-family: "宋体";
+  justify-content: center;
+  align-items: center;
 }

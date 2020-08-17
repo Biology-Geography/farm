@@ -1,6 +1,9 @@
 {
   "pages":[
+    "pages/search/index",
     "pages/index/index",
+    "pages/search-item/index",
+
     "pages/Detail-Page/index",
     "pages/sitemap/index",
     "pages/register/index",
@@ -16,7 +19,7 @@
     "pages/warehouse1/index",
     "pages/goods/index",
     "pages/goods-detail/index",
-    "pages/search/index",  
+
     "pages/info-plantation/index",
     "pages/get/index",
     "pages/warehouse-detail/index",
