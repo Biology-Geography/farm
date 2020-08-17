@@ -1,9 +1,8 @@
 {
   "pages":[
-    "pages/search/index",
     "pages/index/index",
+    "pages/search/index",
     "pages/search-item/index",
-
     "pages/Detail-Page/index",
     "pages/sitemap/index",
     "pages/register/index",
