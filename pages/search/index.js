@@ -62,9 +62,6 @@ Page({
     clicksearch(e){
         var keyword = e.currentTarget.dataset.record;
         var that = this;
-        that.setData({
-            keyword:keyword
-        })
         that.JumpTo(keyword)
     },
     //删除搜素记录
