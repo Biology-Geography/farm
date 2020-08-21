@@ -5,13 +5,14 @@
                 <image src="/image/sousuo.png"></image>
                 <input value="{{keyword}}"></input>
             </view>
-            <view class="nav-T">
-                <image src="{{localimage}}"   bindtap="Tran"></image>
+            <view class="nav-T" bindtap="Tran" >
+                <image src="/image/moshi-B.png" wx:if="{{moshi === true}}"></image>
+                <image src="/image/moshi-A.png" wx:else></image>
             </view>
         </view>
         <text class="tip">共为你找到{{Length}}个农场</text>
     </view>
-    <view class="s-Plantation">
+    <view class="{{moshi ===true ?'s-Plantation':'s-style'}}">
         <view class="s-items" wx:if="{{keyword !== ''}}">
             <view class="s-item" wx:for="{{Someplantation}}" data-id="{{item.siteId}}" bindtap="gotoInfoplantation">
                 <view class="s-content">
@@ -35,4 +36,5 @@
             </view>
         </view>
     </view>
+    <view class="tishi">已经到底了！</view>
 </view>

@@ -80,6 +80,11 @@ Page({
           url: '/pages/logout/index',
         })
     },
+    gotologin:function(){
+      wx.navigateTo({
+        url: '/pages/login/index',
+      })
+    },
     changeimage(){
       wx.navigateTo({
         url: '/pages/edit/index',

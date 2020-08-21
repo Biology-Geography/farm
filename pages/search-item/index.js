@@ -6,7 +6,7 @@ Page({
     Someplantation:[],
     Length:0,
     imgUrl:'https://www.agribigdata.net/image/CloudRanchFileStorage/siteImage/',
-    localimage:"/image/moshi-B.png",
+    moshi:true
   },
   onLoad:function(option){
     var that = this
@@ -94,5 +94,11 @@ Page({
           wx.setStorageSync('places', res);
       }
    })
+  },
+  Tran(){
+    var that = this;
+    that.setData({
+      moshi: ! that.data.moshi
+    })
   }
 })

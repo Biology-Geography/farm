@@ -6,6 +6,7 @@ Page({
     usersex:"",
     usernum:"",
     useremail:"",
+    isrepeat:true,
     sex:[{
     id:1,
     value:"男",
@@ -35,6 +36,7 @@ inputname(e){
           title: '用户名重复！',
           icon:'none'
         })
+        this.data.isrepeat = false
       }
     }
   })
@@ -55,27 +57,33 @@ getForm:function(e){
 getData:function(e){
   var getdata=this.data;
   const db=wx.cloud.database();//初始化数据库
-  db.collection("user-info").add({
-    data:{
-      nickName:getdata.data.nickName,
-      userpsd:getdata.data.userpsd,
-      usersex:getdata.data.usersex,
-      usernum:getdata.data.usernum,
-      useremail:getdata.data.useremail,
-      userimage:'cloud://farm-intelligence.6661-farm-intelligence-1302482289/defualt.png'
-    }
-  }).then(res=>{
-      wx.showToast({
-        title: '注册成功！',
-        duration:2500
-      })
-      wx.navigateBack({
-        delta:1
-      });
-  }).catch(err=>{
-    console.log("添加数据失败",err);
-  })
-
+  if(this.data.isrepeat){
+    db.collection("user-info").add({
+      data:{
+        nickName:getdata.data.nickName,
+        userpsd:getdata.data.userpsd,
+        usersex:getdata.data.usersex,
+        usernum:getdata.data.usernum,
+        useremail:getdata.data.useremail,
+        userimage:'cloud://farm-intelligence.6661-farm-intelligence-1302482289/defualt.png'
+      }
+    }).then(res=>{
+        wx.showToast({
+          title: '注册成功！',
+          duration:2500
+        })
+        wx.navigateBack({
+          delta:1
+        });
+    }).catch(err=>{
+      console.log("添加数据失败",err);
+    })
+  }else{
+    wx.showToast({
+      title: '用户名重复！注册不成功',
+      icon:'none',
+      duration:2000
+    })
+  }
 }
-
 })

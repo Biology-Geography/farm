@@ -1,8 +1,8 @@
 //初始化数据库
 const db = wx.cloud.database();
 const accountcollection = db.collection("user-info");
-let account=null;
-let password=null;
+let account = null;
+let password = null;
 Page({
      Data:{
 
@@ -37,6 +37,11 @@ Page({
               }
             }
           }
+        })
+      },
+      gotoregister(){
+        wx.navigateTo({
+          url: '/pages/register/index',
         })
       },
     handleGetUserInfo(e){

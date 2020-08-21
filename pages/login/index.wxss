@@ -1,57 +1,47 @@
+page {
+  width: 100%;
+  height: 100%;
+  background-color: #fdf6f6;
+}
 .id_name {
-  margin-top: 35%;
-  margin-left: 15%;
+  width: 100%;
+  height: 100%;
 }
-.id_name .label1 {
-  color: #2e8b57;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-size: 60rpx;
-  font-weight: 100;
+.id_name .tip1 {
+  margin-top: 70px;
+  font-size: 50rpx;
+  text-align: center;
+  color: #069c51;
 }
-.id_name .user_name {
-  margin-top: 10%;
+.id_name .user-info {
+  margin-top: 30px;
   display: flex;
 }
-.id_name .user_name label {
-  color: black;
+.id_name .user-info label {
+  width: 25% ;
+  font-size: 40rpx;
+  color: #069c51;
 }
-.id_name .user_name input {
-  border: 1px solid grey;
-}
-.id_name .user_password {
-  padding-top: 10px;
-  display: flex;
-}
-.id_name .user_password label {
-  color: black;
-}
-.id_name .user_password input {
-  border: 1px solid grey;
+.id_name .user-info input {
+  width: 60%;
+  border-bottom: 1px solid #000000;
+  text-align: center;
 }
 .id_name .btn {
-  margin-top: 40px;
-  margin-right: 20%;
-  font-family: "宋体";
+  margin-top: 50px;
 }
-.id_name .btn .btn_1 {
-  background-color: #2e8b57;
-  border: 1px solid gray;
-  border-radius: 50px;
-  color: #fff;
-}
-.id_name .btn .btn_2 {
-  margin-top: 10px;
-  background-color: #2e8b57;
-  border: 1px solid gray;
-  border-radius: 50px;
-  color: #fff;
+.id_name .btn button {
+  margin-top: 20px;
+  width: 100%;
+  color: white;
+  background-color: #08743e;
+  border-radius: 15rpx;
 }
 .id_name .user-register {
-  margin-top: 20%;
-  margin-left: 20%;
+  margin-top: 70px;
 }
-.id_name .user-register label {
-  color: skyblue;
-  font-family: "宋体";
-  font-weight: lighter;
+.id_name .user-register .tip2 {
+  text-align: center;
+  color: #069c51;
+  font-size: 35rpx;
 }

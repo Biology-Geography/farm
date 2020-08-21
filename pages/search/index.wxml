@@ -17,7 +17,6 @@
                    <text>{{item.keyword}}</text>
                </view>
             </view>
-
         </view>
         <view wx:else class="tip">
             <view class="No-record"><label>暂无历史记录！</label></view>

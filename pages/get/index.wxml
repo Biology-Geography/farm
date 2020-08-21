@@ -1,6 +1,6 @@
 <!--认领页面-->
 <view class="get-page">
-    <view class="get-content" wx:if="{{places}}">
+    <view class="get-content" wx:if="{{places.length !== 0}}">
         <view class="items" wx:for="{{places}}" data-placeid="{{item.placeId}}" data-siteid="{{item.siteId}}" data-entid="{{item.entId}}" bindtap="gotodetail">
             <view class="item-entName">{{item.entName}}</view>
             <view class="item-content">

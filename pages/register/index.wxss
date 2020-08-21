@@ -15,10 +15,11 @@ page {
   display: flex;
   flex-shrink: 0;
   font-size: 35rpx;
+  color: #069c51;
 }
 .register-user .register-form .f1 input {
   width: 75%;
-  border: 1px solid rgba(13, 47, 138, 0.5);
+  border: 1px solid #08743e;
   border-radius: 5rpx;
   padding: 10rpx 15rpx;
   text-align: right;
@@ -33,6 +34,7 @@ page {
   display: flex;
   flex-shrink: 0;
   font-size: 33rpx;
+  color: #069c51;
 }
 .register-user .register-form .inpbox .inp-radiogroup {
   margin-top: 5px;
@@ -42,7 +44,7 @@ page {
   display: flex;
 }
 .register-user .register-form button {
-  background-color: rgba(13, 47, 138, 0.5);
+  background-color: #08743e;
   color: #fff;
   width: 100%;
   margin-top: 50rpx;
