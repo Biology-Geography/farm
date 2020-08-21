@@ -6,6 +6,7 @@
     "pages/Detail-Page/index",
     "pages/sitemap/index",
     "pages/register/index",
+    "pages/login/index",
     "pages/crop1/index",
     "pages/place/index",
     "pages/crop/index",
@@ -18,7 +19,6 @@
     "pages/warehouse1/index",
     "pages/goods/index",
     "pages/goods-detail/index",
-
     "pages/info-plantation/index",
     "pages/get/index",
     "pages/warehouse-detail/index",
@@ -35,8 +35,7 @@
     "pages/area/index",
     "pages/userqrcode/index",
     "pages/cow1/index",
-    "pages/add-goods/index",
-    "pages/login/index"
+    "pages/add-goods/index"
   ],
   "window":{
     "backgroundTextStyle":"light",
