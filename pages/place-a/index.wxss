@@ -1,0 +1,119 @@
+.p-page .p-title {
+  background-color: #2e8b57;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  color: #f1f0f0;
+  font-size: 40rpx;
+}
+.p-page .p-item {
+  margin-left: 30rpx;
+  margin-top: 30rpx;
+  display: flex;
+  flex-direction: column;
+}
+.p-page .p-item label {
+  font-size: 35rpx;
+  color: #65088a;
+}
+.p-page .p-item text {
+  font-size: 38rpx;
+  color: #9d9ba0;
+}
+.p-page .p-item .p-img {
+  display: flex;
+  flex-wrap: wrap;
+}
+.p-page .p-item .p-img image {
+  margin-left: 50rpx;
+  width: 150rpx;
+  height: 120rpx;
+  border-radius: 15rpx;
+}
+.p-page .p-item .p-tip {
+  font-size: 38rpx;
+  color: #9d9ba0;
+}
+.p-page .icon {
+  position: fixed;
+  top: 90%;
+  left: 85%;
+}
+.p-page .icon image {
+  float: right;
+  width: 80rpx;
+  height: 80rpx;
+}
+.p-page .p-titles {
+  background-color: #2e8b57;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+.p-page .p-titles label {
+  color: #f1f0f0;
+  font-size: 35rpx;
+  width: 75%;
+}
+.p-page .p-titles button {
+  background-color: #f1f0f0;
+  border-radius: 25rpx;
+  text-align: center;
+}
+.p-page .p-items {
+  margin-left: 30rpx;
+  margin-top: 30rpx;
+  display: flex;
+  flex-direction: column;
+}
+.p-page .p-items label {
+  font-size: 35rpx;
+  color: #65088a;
+}
+.p-page .p-items input {
+  border: 1px solid rgba(13, 47, 138, 0.5);
+  border-radius: 10rpx;
+  text-align: left;
+  color: #9d9ba0;
+  width: 95%;
+}
+.p-page .p-items textarea {
+  border: 1px solid rgba(13, 47, 138, 0.5);
+  border-radius: 10rpx;
+  text-align: left;
+  color: #9d9ba0;
+  width: 95%;
+}
+.p-page .p-items .p-img {
+  display: flex;
+  flex-wrap: wrap;
+}
+.p-page .p-items .p-img image {
+  margin-left: 50rpx;
+  width: 150rpx;
+  height: 120rpx;
+  border-radius: 15rpx;
+}
+.p-page .p-items .p-tip {
+  font-size: 38rpx;
+  color: #9d9ba0;
+}
+.p-page .p-add {
+  margin-top: 20px;
+}
+.p-page .p-add button {
+  border: 1px dashed rgba(13, 47, 138, 0.5);
+  width: 100%;
+  color: rgba(13, 47, 138, 0.5);
+  background-color: #fff;
+}
+.p-page .icons {
+  position: fixed;
+  top: 90%;
+  left: 85%;
+}
+.p-page .icons image {
+  float: right;
+  width: 100rpx;
+  height: 100rpx;
+}

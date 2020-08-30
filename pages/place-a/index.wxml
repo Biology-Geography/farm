@@ -1,0 +1,58 @@
+<view class="p-page">
+    <view wx:if="{{show}}">
+        <view class="p-title">
+            <text>{{place.name}}</text>
+        </view>
+        <view class="p-item">
+            <label>名称：</label>
+            <text>{{place.name}}</text>
+        </view>
+        <view class="p-item">
+            <label>简介：</label>
+            <text>{{place.remark}}</text>
+        </view>
+        <view class="p-item">
+            <label>图片</label>
+            <view wx:if="{{Images.length !== 0}}" class="p-img">
+                <view wx:for="{{Images}}" >
+                    <image src="{{item.imgUrl}}"></image>
+                </view>
+            </view>
+            <view wx:else class="p-tip">暂无图片！</view>
+        </view>
+        <view class="icon">
+            <image src="/image/bianji.png" bindtap='Edit'></image>
+        </view>
+    </view>
+    <view wx:else>
+        <form bindsubmit="formSubmit">
+            <view class="p-titles">
+                <label>{{place.name}}</label>
+                <button size="mini" form-type="submit">确认</button>
+            </view>
+            <view class="p-items">
+                <label>名称：</label>
+                <input name="name" value="{{place.name}}"></input>
+            </view>
+            <view class="p-items">
+                <label>简介：</label>
+                <textarea name="remark" auto-height="true" value="{{place.remark}}"></textarea>
+            </view>
+            <view class="p-items">
+                <label>图片</label>
+                <view wx:if="{{Images.length !== 0}}" class="p-img">
+                    <view wx:for="{{Images}}" data-index="{{index}}" bindlongpress="deleteImage">
+                        <image src="{{item.imgUrl}}" ></image>
+                    </view>
+                </view>
+                <view wx:else class="p-tip">暂无图片！</view>
+            </view>
+            <view class="p-add">
+                <button bindtap="addImg">添加图片</button>
+            </view>
+            <view class="icons">
+                <image src="/image/shanchu.png" bindtap="cancel"></image>
+              </view>
+        </form>
+    </view>
+</view>
