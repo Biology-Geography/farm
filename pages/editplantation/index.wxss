@@ -1,0 +1,142 @@
+.ed-title {
+  height: 30px;
+  background-color: #2e8b57;
+  color: #f1f0f0;
+  font-size: 35rpx;
+  align-items: center;
+}
+.ed-item {
+  margin-left: 30rpx;
+  margin-top: 30rpx;
+  display: flex;
+  flex-direction: column;
+}
+.ed-item label {
+  font-size: 35rpx;
+  color: #65088a;
+}
+.ed-item text {
+  font-size: 38rpx;
+  color: #9d9ba0;
+}
+.ed-image {
+  margin-left: 30rpx;
+  margin-top: 30rpx;
+  display: flex;
+  flex-direction: column;
+}
+.ed-image label {
+  font-size: 35rpx;
+  color: #65088a;
+}
+.ed-image .ed-layer {
+  display: flex;
+  flex-wrap: wrap;
+}
+.ed-image .ed-layer image {
+  margin-left: 50rpx;
+  width: 150rpx;
+  height: 120rpx;
+  border-radius: 15rpx;
+}
+.ed-image text {
+  color: #9d9ba0;
+}
+.icon {
+  position: fixed;
+  top: 90%;
+  left: 85%;
+}
+.icon image {
+  float: right;
+  width: 80rpx;
+  height: 80rpx;
+}
+.ed-titles {
+  height: 30px;
+  background-color: #2e8b57;
+  display: flex;
+  align-items: center;
+}
+.ed-titles text {
+  color: #f1f0f0;
+  font-size: 35rpx;
+  width: 75%;
+}
+.ed-titles button {
+  background-color: #f1f0f0;
+  border-radius: 25rpx;
+  text-align: center;
+}
+.ed-items {
+  margin-left: 30rpx;
+  margin-top: 30rpx;
+  display: flex;
+  flex-direction: column;
+}
+.ed-items label {
+  font-size: 35rpx;
+  color: #65088a;
+}
+.ed-items input {
+  border: 1px solid rgba(13, 47, 138, 0.5);
+  border-radius: 10rpx;
+  text-align: left;
+  color: #9d9ba0;
+  width: 95%;
+  height: 70rpx;
+}
+.ed-items picker {
+  border: 1px solid rgba(13, 47, 138, 0.5);
+  border-radius: 10rpx;
+  text-align: left;
+  color: #9d9ba0;
+  width: 95%;
+  height: 70rpx;
+}
+.ed-items text {
+  font-size: 38rpx;
+  color: #9d9ba0;
+}
+.ed-images {
+  margin-left: 30rpx;
+  margin-top: 30rpx;
+  display: flex;
+  flex-direction: column;
+}
+.ed-images label {
+  font-size: 35rpx;
+  color: #65088a;
+}
+.ed-images .ed-layer {
+  display: flex;
+  flex-wrap: wrap;
+}
+.ed-images .ed-layer image {
+  margin-left: 50rpx;
+  width: 150rpx;
+  height: 120rpx;
+  border-radius: 15rpx;
+}
+.ed-images text {
+  color: #9d9ba0;
+}
+.ed-add {
+  margin-top: 20px;
+}
+.ed-add button {
+  border: 1px dashed rgba(13, 47, 138, 0.5);
+  width: 100%;
+  color: rgba(13, 47, 138, 0.5);
+  background-color: #fff;
+}
+.icons {
+  position: fixed;
+  top: 90%;
+  left: 85%;
+}
+.icons image {
+  float: right;
+  width: 100rpx;
+  height: 100rpx;
+}

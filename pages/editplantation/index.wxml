@@ -1,0 +1,76 @@
+<view class="ed-page">
+  <view wx:if="{{show}}" class="ed-page1">
+    <view class="ed-title">
+      <text>{{site.siteName}}</text>
+    </view>
+    <view class="ed-item">
+      <label>名称：</label>
+      <text>{{site.siteName}}</text>
+    </view>
+    <view class="ed-item">
+      <label>地址：</label>
+      <text>{{region[0]}}-{{region[1]}}-{{region[2]}}</text>
+    </view>
+    <view class="ed-item">
+      <label>详细地址：</label>
+      <text>{{site.location}}</text>
+    </view>
+    <view class="ed-item">
+      <label>简介：</label>
+      <text>{{site.remarks}}</text>
+    </view>
+    <view class="ed-image">
+      <label>图片：</label>
+      <view wx:if="{{site.image.length !==0}}" class="ed-layer">
+        <view wx:for="{{site.image}}" >
+          <image src="{{item.imgUrl}}"></image>
+        </view>
+      </view>
+      <view wx:else><text>暂无图片！</text></view>
+    </view>
+    <view class="icon">
+      <image src="/image/bianji.png" bindtap="Edit"></image>
+    </view>
+  </view>
+  <view wx:else>
+    <form bindsubmit="formSubmit">
+      <view class="ed-titles">
+        <text>{{site.siteName}}</text>
+        <button size="mini"  form-type="submit">确认</button>
+      </view>
+      <view class="ed-items">
+        <label>名称：</label>
+        <input name="name" value="{{site.siteName}}"></input>
+      </view>
+      <view class="ed-items">
+        <label>地址：</label>
+        <picker mode="region" bindchange="bindRegionChange" value="{{region}}">
+          {{region[0]}}-{{region[1]}}-{{region[2]}}
+        </picker>
+      </view>
+      <view class="ed-items">
+        <label>详细地址：</label>
+        <input name="address" value="{{site.location}}"></input>
+      </view>
+      <view class="ed-items">
+        <label>简介：</label>
+        <input name="remarks" value="{{site.remarks}}"></input>
+      </view>
+      <view class="ed-images">
+        <label>图片：</label>
+        <view wx:if="{{images.length !==0}}" class="ed-layer">
+          <view wx:for="{{images}}"  data-index="{{index}}" bindlongpress="deleteImage">
+            <image src="{{item.imgUrl}}"></image>
+          </view>
+        </view>
+        <view wx:else><text>暂无图片！</text></view>
+      </view>
+      <view class="ed-add">
+        <button bindtap="addImg">添加图片</button>
+      </view>
+      <view class="icons">
+        <image src="/image/shanchu.png" bindtap="cancel"></image>
+      </view>
+    </form>
+  </view>
+</view>
