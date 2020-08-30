@@ -16,10 +16,10 @@ Page({
     current:0
   },
   onLoad:function(o){
-    var that=this;
+    var that = this;
     var account=wx.getStorageSync('userinfo').nickName;
     var entId = o.entId;
-    var siteId= o.siteId;
+    var siteId = o.siteId;
     var placeId = o.placeId;
     that.querySensorData(placeId);
     that.setData({
@@ -30,7 +30,7 @@ Page({
     })
   },
   onShow:function(){
-    var that=this;
+    var that = this;
     wx.request({
       url:"https://www.agribigdata.net/CloudRanch/queryPlaceInfo",
       method:'GET',
@@ -84,7 +84,7 @@ Page({
         let msg = res.data.msg;
         let isMe = that.data.isMe
         let type = res.data.type;
-        if(msg==="error"){
+        if(msg === "error"){
           var isClaimed = false
         }else{
           var isClaimed = true
@@ -123,7 +123,7 @@ Page({
     });
   },
   claim:function(){
-    var that=this;
+    var that = this;
     wx.showModal({
       title:'提示',
       content:'确定认领该地块吗？',
@@ -133,7 +133,6 @@ Page({
             url:'https://www.agribigdata.net/CloudRanch/claimMsg/addClaimMsg',
             method:'get',
             data: {
-              account: res.data,
               placeId:that.data.placeId,
               siteId:that.data.siteId,
               entId:that.data.entId,

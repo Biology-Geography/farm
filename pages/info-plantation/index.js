@@ -39,7 +39,7 @@ Page({
       siteprovince:re.data.site.province,
       siteremarks:re.data.site.remarks,
       places:places.data.places,
-      entId:re.data.entId,
+      entId:re.data.site.entId,
       placesId:placesId
     })
     that.queryplaceImage(0,places);

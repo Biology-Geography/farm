@@ -1,10 +1,17 @@
 <!--基地页面-->
 <view>
     <view wx:if="{{sites.length!==0}}" class="Platation">
-        <view wx:for="{{sites}}" wx:key="{{item.siteId}}" data-siteid="{{item.siteId}}" data-entid="{{enterprises[index].entId}}" bindtap="goToSiteInfoPage">
-            <image src="{{item.image}}"></image>
+        <view wx:for="{{sites}}" wx:key="{{item.siteId}}" data-siteid="{{item.siteId}}" data-entid="{{enterprises[index].entId}}" bindtap="gotoEdit">
+            <view class="s-item" >
+                <view class="s-img"><image src="{{item.image}}"></image></view>
+                <view class="s-info">
+                    <text class="s-p1">{{enterprises[index].entName}}</text>
+                    <text class="s-p2">{{item.siteName}}</text>
+                    <text class="s-location">{{item.city}}-{{item.county}}</text>
+                </view>
+            </view>
         </view>
     </view>
-    <view class="NO-plantation">--暂无基地！--</view>
+    <view wx:else class="NO-plantation">--暂无基地！--</view>
 </view>
 

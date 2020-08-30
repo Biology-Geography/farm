@@ -1,17 +1,17 @@
 // pages/plantatiton/index.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
     sites:[],
     enterprises:[],
     imgUrl:"https://www.agribigdata.net/image/CloudRanchFileStorage/siteImage/"
   },
-  onLoad(){
+  onShow:function(){
     var that = this;
     var userId = wx.getStorageSync('userinfo').nickName;
+    that.queryPlantation(userId);
+  },
+  queryPlantation(userId){
+    var that = this;
     wx.request({
       url:"https://www.agribigdata.net/CloudRanch/plantation/entGetPlantation",
       method:"get",
@@ -22,9 +22,9 @@ Page({
          console.log(res.data);
          let sites = res.data.plantation;
          let enterprise = res.data.enterprise;
-         site.map(i => {
+         sites.map(i => {
            if( i.image === 'no'){
-             i.image = imgUrl + 'noImage.png';
+             i.image = that.data.imgUrl + 'noImage.png';
            }else{
              i.image = that.data.imgUrl + i.image;
            }
@@ -36,5 +36,11 @@ Page({
        }
     });
   },
-
+  gotoEdit(e){
+    var siteId = e.currentTarget.dataset.siteid;
+    var entId = e.currentTarget.dataset.entdid;
+    wx.navigateTo({
+      url: '/pages/editplantation/index?siteId=' + siteId + "&entId=" + entId,
+    })
+  }
 })

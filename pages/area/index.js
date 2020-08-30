@@ -1,66 +1,77 @@
 // pages/area/index.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    Plantations:[],
+    siteId:[],
+    places:[],
+    index:0,
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  onLoad: function () {
+    var that = this;
+    var userId = wx.getStorageSync('userinfo').nickName;
+    that.queryPlantation(userId);
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  queryPlantation(userId){
+    var that = this;
+    wx.request({
+      url:'https://www.agribigdata.net/CloudRanch/plantation/entGetPlantation',
+      method:'get',
+      data:{
+        account:userId
+      },
+      success(res){
+        console.log(res.data);
+        var Plantations = res.data.plantation;
+        var siteId = Plantations.map(i =>{
+          return i.siteId
+        })
+        Plantations = Plantations.map(i =>{
+          return i.siteName
+        })
+        if(siteId.length !==0){
+          that.queryPlaces(siteId[that.data.index]);
+        }
+        that.setData({
+          siteId:siteId,
+          Plantations:Plantations
+        })
+      }
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  queryPlaces(siteid){
+    var that = this;
+    wx.request({
+      url:'https://www.agribigdata.net/CloudRanch/queryPlaces',
+      method:'get',
+      data:{
+        placeId: -1,
+        siteId:siteid,
+        limit: -1,
+        pageNumber: 0,
+        type: ''
+      },
+      success(res){
+        console.log(res);
+        var places = res.data.places;
+        that.setData({
+          places:places
+        })
+      }
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  bindPickerChange(e){
+    var that = this;
+    var index = e.detail.value;
+    that.setData({
+      index: index
+    })
+    that.queryPlaces(that.data.siteId[index])
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  gotoplace(e){
+    var that = this;
+    var placeId = e.currentTarget.dataset.placeid;
+    wx.navigateTo({
+      url:'/pages/place-a/index?placeId=' + placeId 
+     })
   }
 })

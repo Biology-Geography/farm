@@ -1,6 +1,8 @@
 {
   "pages":[
+
     "pages/index/index",
+    "pages/plantatiton/index",
     "pages/search/index",
     "pages/search-item/index",
     "pages/Detail-Page/index",
@@ -9,6 +11,7 @@
     "pages/login/index",
     "pages/crop1/index",
     "pages/place/index",
+    "pages/place-a/index",
     "pages/crop/index",
     "pages/panorama/index",
     "pages/vedio/index",
@@ -31,7 +34,7 @@
     "pages/enterprise/index",
     "pages/enterprise2/index",
     "pages/enterprise1/index",
-    "pages/plantatiton/index",
+    "pages/editplantation/index",
     "pages/area/index",
     "pages/userqrcode/index",
     "pages/cow1/index",

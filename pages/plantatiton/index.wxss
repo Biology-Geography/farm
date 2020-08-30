@@ -1,3 +1,41 @@
+.s-item {
+  display: flex;
+  justify-content: space-around;
+}
+.s-item .s-img {
+  display: flex;
+  align-items: center;
+  height: 200rpx;
+  width: 25%;
+}
+.s-item .s-img image {
+  box-shadow: 3px 3px 5px #d3d1d1;
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 25rpx;
+}
+.s-item .s-info {
+  border-bottom: 1px solid #724ccc;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+.s-item .s-info .s-p1 {
+  padding-top: 30rpx;
+  color: #c0bdbd;
+  font-size: 28rpx;
+}
+.s-item .s-info .s-p2 {
+  padding-top: 30rpx;
+  color: #313030;
+  font-size: 35rpx;
+}
+.s-item .s-info .s-location {
+  padding-top: 30rpx;
+  color: #313030;
+  font-size: 30rpx;
+  text-align: right;
+}
 .NO-plantation {
   margin-top: 10px;
   font-weight: bolder;

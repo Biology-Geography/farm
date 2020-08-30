@@ -1,6 +1,21 @@
 <!--地块页面-->
-<view class="Area-page">
-    <view class="NO-choose"><label>暂无基地可选择!</label></view>
-    <view class="NO-area">--此基地下暂无地块！--</view>
+<view class="A-page">
+    <view wx:if="{{Plantation.length !== 0}}">
+        <picker value="{{index}}" range="{{Plantations}}" bindchange="bindPickerChange" class="picker">
+            <view class="a-title">
+                <text>{{Plantations[index]}}</text>
+                <image src="/image/icon_item.png"></image>
+            </view>
+        </picker>
+    </view>
+    <view wx:else class="a-Noplan">暂无基地可选择！</view>
+    <view wx:if="{{places.length!==0}}">
+        <view wx:for="{{places}}" data-placeid="{{item.placeId}}" bindtap="gotoplace">
+            <view class="a-item">
+                <text>{{item.placeName}}</text>
+            </view>
+        </view>
+    </view>
+    <view wx:else class="a-Noplace">此基地下暂无地块！</view>
 </view>
 
